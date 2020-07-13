@@ -35,4 +35,4 @@ class OptimizedModel(onnxruntime.InferenceSession):
         return self.run(None, {self.get_inputs()[0].name: to_numpy(input)})
 
     def serialize(self, model_file):
-        shutil.copyfile(self.temp_model_file, model_file)        
+        shutil.copyfile(self.temp_model_file, model_file)
